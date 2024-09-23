@@ -1,5 +1,6 @@
 import SwiftUI
 
+#if os(iOS)
 struct TopBarModifier<Left, Right>: ViewModifier where Left: View, Right: View {
     var title: String
     var titleFont: Font
@@ -61,9 +62,9 @@ struct TopBar<Left, Right>: View where Left: View, Right: View {
 extension View {
     func topBar<Left: View, Right: View>(
         title: String,
-        titleFont: Font = .spoqaMedium(fontSize: 18),
-        titleColor: Color = .gray900,
-        backgroundColor: Color = .clear,
+        titleFont: Font = .climeetFontTitle3(),
+        titleColor: Color = .white,
+        backgroundColor: Color = .text09,
         padding: (Edge.Set, CGFloat?) = (.horizontal, 18),
         @ViewBuilder leftItem: @escaping () -> Left,
         @ViewBuilder rightItem: @escaping () -> Right
@@ -80,4 +81,28 @@ extension View {
             )
         )
     }
+    
+    func backTopBar(
+        title: String,
+        backAction: @escaping () -> Void
+    ) -> some View {
+        modifier(
+            TopBarModifier(
+                title: title,
+                titleFont: .climeetFontTitle3(),
+                titleColor: .white,
+                backgroundColor: .text09,
+                padding: (.horizontal, 16),
+                leftItem: {
+                    Button {
+                        backAction()
+                    } label: {
+                        Image(.icBack)
+                    }
+                },
+                rightItem: { EmptyView() }
+            )
+        )
+    }
 }
+#endif
