@@ -13,7 +13,9 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "DesignSystem"),
+            name: "DesignSystem",
+            resources: [.process("Resources/Font")]
+        ),
 
     ],
     swiftLanguageModes: [.v5]
