@@ -60,7 +60,7 @@ struct TopBar<Left, Right>: View where Left: View, Right: View {
 }
 
 extension View {
-    func topBar<Left: View, Right: View>(
+    public func topBar<Left: View, Right: View>(
         title: String,
         titleFont: Font = .climeetFontTitle3(),
         titleColor: Color = .white,
@@ -82,7 +82,7 @@ extension View {
         )
     }
     
-    func backTopBar(
+    public func backTopBar(
         title: String,
         backAction: @escaping () -> Void
     ) -> some View {
