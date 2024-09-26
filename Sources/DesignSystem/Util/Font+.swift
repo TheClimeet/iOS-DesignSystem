@@ -23,7 +23,7 @@ extension Font {
     }
     
     public static func climeetFontTitle4_5() -> Self {
-            Self.custom("Pretendard-SemiBold", size: 18)
+        Self.custom("Pretendard-SemiBold", size: 18)
     }
     
     public static func climeetFontParagraph1() -> Self {

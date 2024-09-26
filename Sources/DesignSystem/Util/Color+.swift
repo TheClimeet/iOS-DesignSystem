@@ -18,7 +18,6 @@ extension Color {
     public static let levelGreen = Color(.levelColorGreen)
     public static let levelOrange = Color(.levelColorOrange)
     public static let levelPink = Color(.levelColorPink)
-    public static let levelPink = Color(.levelColorPink)
     public static let levelPurple = Color(.levelColorPurple)
     public static let levelRed = Color(.levelColorRed)
     public static let levelSkyBlue = Color(.levelColorSkyblue)
@@ -35,17 +34,17 @@ extension Color {
     public static let starNotFilled = Color(.starNotfilled)
     
     // Text
-    public static let text00 = Color(.text0)
+    public static let text00 = Color(.textWhite)
     public static let text01 = Color(.text01)
     public static let text02 = Color(.text02)
     public static let text03 = Color(.text03)
     public static let text04 = Color(.text04)
     public static let text05 = Color(.text05)
     public static let text06 = Color(.text06)
-    public static let text06_5 = Color(.text065)
+    public static let text06_5 = Color(.text65)
     public static let text07 = Color(.text07)
     public static let text08 = Color(.text08)
-    public static let text09 = Color(.text09)
+    public static let text09 = Color(.textBlack)
     
     // unnamed
     public static let gray72 = Color(.unnamedGray72)
